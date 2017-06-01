@@ -1,10 +1,12 @@
 package com.onlinecalculator.calculator.calctypes;
 import java.util.Scanner;
 
-class Calc1
+
+
+public class   BasicCalc
 {
-	int a,b,c,result, ch;
-	public Calc1()
+	public int a,b,c,result, ch;
+	public   BasicCalc()
         {
 		a=0;
 		b=0;
@@ -16,10 +18,10 @@ class Calc1
 	public int menu()
         {
 		System.out.println("..select option..");
-		System.out.println("..addition..");
-		System.out.println("..subtraction..");
-		System.out.println("..multiplication..");
-		System.out.println("..division..");
+		System.out.println("1.addition..");
+		System.out.println("2.subtraction..");
+		System.out.println("3.multiplication..");
+		System.out.println("4.division..");
 		System.out.println("..enter your choice..");
 		Scanner x=new Scanner(System.in);
 		ch=x.nextInt();
@@ -35,7 +37,7 @@ class Calc1
     	
     	System.out.println("enter first number");
     	a=x.nextInt();
-    	System.out.println("enter first number");
+    	System.out.println("enter second number");
     	b=x.nextInt();
     }
 
@@ -95,12 +97,5 @@ class Calc1
 		c=a/b;
 		return c;
 	}
-	public static void main(String arg [])
-	{
-	Calc1 c=new Calc1();
-	c.userInputs();
-	c.menu();
 	
-	c.performOperation();
-}
 }
